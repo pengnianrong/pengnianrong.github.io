@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-07T04:32:06.053Z</updated>
+  <updated>2019-04-06T02:20:24.302Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,20 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/04/07/2019/Docker/"/>
-    <id>http://yoursite.com/2019/04/07/2019/Docker/</id>
-    <published>2019-04-07T04:31:41.467Z</published>
-    <updated>2019-04-07T04:32:06.053Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>Vue应用是如何形成的</title>
@@ -435,6 +421,27 @@
       
       
         &lt;p&gt;文/王自如&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/4957551-7373199d83d991eb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>乔布斯配音词</title>
+    <link href="http://yoursite.com/2017/11/04/2017/%E4%B9%94%E5%B8%83%E6%96%AF%E9%85%8D%E9%9F%B3%E8%AF%8D/"/>
+    <id>http://yoursite.com/2017/11/04/2017/乔布斯配音词/</id>
+    <published>2017-11-03T16:00:00.000Z</published>
+    <updated>2019-01-26T07:09:38.741Z</updated>
+    
+    <content type="html"><![CDATA[<p>文/Jobs1997年配音广告<br><img src="http://upload-images.jianshu.io/upload_images/4957551-9e2a0a2784e863b1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><em>Here’s to the crazy ones<br>The misfits, the rebels, the troublemakers, the round pegs in the square holes<br>The ones who see things differently<br>They are not fond of rules<br>And they have no respect for the status quo<br>You can quote them,disagree  with them, glorify or vilify them<br>About the only thing you can’t do is ignore them<br>Because they change things<br>They push the human race forward<br>And some may see them as the crazy ones,we see genius<br>Because the people who are crazy enough to think they can change the world are the ones who do</em></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;文/Jobs1997年配音广告&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/4957551-9e2a0a2784e863b1.jpg?imageMogr2/auto-orient/strip%7Cim
       
     
     </summary>
