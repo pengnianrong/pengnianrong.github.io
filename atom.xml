@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Ryan</title>
+  <title>搬主任</title>
   
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-17T16:44:13.348Z</updated>
+  <updated>2020-06-27T13:49:27.496Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,111 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>憾</title>
+    <link href="http://yoursite.com/2020/06/26/2020/%E6%86%BE/"/>
+    <id>http://yoursite.com/2020/06/26/2020/憾/</id>
+    <published>2020-06-25T16:00:00.000Z</published>
+    <updated>2020-06-27T13:49:27.496Z</updated>
+    
+    <content type="html"><![CDATA[<p>文/年容</p><p>梅花曾落满过南山，我等的人不会再骑马归来。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;文/年容&lt;/p&gt;
+&lt;p&gt;梅花曾落满过南山，我等的人不会再骑马归来。&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Nginx静态资源路径配置</title>
+    <link href="http://yoursite.com/2020/04/02/2020/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E8%B7%AF%E5%BE%84%E9%85%8D%E7%BD%AE/"/>
+    <id>http://yoursite.com/2020/04/02/2020/Nginx静态资源路径配置/</id>
+    <published>2020-04-01T16:00:00.000Z</published>
+    <updated>2020-04-01T16:05:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>文/年容</p><p>踩坑日记，简单记录。</p><pre><code class="java">server {    listen       8088;    server_name  localhost;    #第1处    location /html {      root   /Users/pengnr/Desktop/;      index  index.html index.htm;    }    #第2处    location /html {      alias  /Users/pengnr/Desktop/html/;      index  index.html index.htm;    }}</code></pre><p>静态资源的绝对路径相同，访问<a href="http://localhost:8088/html，找到静态资源的方式如下：" target="_blank" rel="noopener">http://localhost:8088/html，找到静态资源的方式如下：</a></p><p>第1处</p><p>/Users/pengnr/Desktop/ + html  <strong>&gt;&gt;&gt;</strong>  /Users/pengnr/Desktop/html</p><p>第2处</p><p>/html  <strong>&gt;&gt;&gt;</strong>  /Users/pengnr/Desktop/html/</p><p><strong>注意第2处alias结尾有反斜杠，第1处root结尾反斜杠可有可无</strong></p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul><li>极客时间《Nginx核心知识100讲》陶辉</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;文/年容&lt;/p&gt;
+&lt;p&gt;踩坑日记，简单记录。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;server {
+    listen       8088;
+    server_name  localhost;
+
+    #第1处
+    location /ht
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>致乌娜</title>
+    <link href="http://yoursite.com/2020/03/23/2020/%E8%87%B4%E4%B9%8C%E5%A8%9C/"/>
+    <id>http://yoursite.com/2020/03/23/2020/致乌娜/</id>
+    <published>2020-03-22T16:00:00.000Z</published>
+    <updated>2020-03-23T11:44:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>文/卓别林</p><p>我的心就如同这张面孔，<br>一半纯白，一半阴影。<br>我可以选择让你看见，<br>也可以选择不让你看见。<br>就像是个巨大的马戏团，<br>它让你兴奋，却让我惶恐。<br>因为我知道散场后永远是——<br>有限温存，无限辛酸。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;文/卓别林&lt;/p&gt;
+&lt;p&gt;我的心就如同这张面孔，&lt;br&gt;一半纯白，一半阴影。&lt;br&gt;我可以选择让你看见，&lt;br&gt;也可以选择不让你看见。&lt;br&gt;就像是个巨大的马戏团，&lt;br&gt;它让你兴奋，却让我惶恐。&lt;br&gt;因为我知道散场后永远是——&lt;br&gt;有限温存，无限辛酸。&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>通过字节码理解自增运算</title>
+    <link href="http://yoursite.com/2020/03/16/2020/%E9%80%9A%E8%BF%87%E5%AD%97%E8%8A%82%E7%A0%81%E7%90%86%E8%A7%A3%E8%87%AA%E5%A2%9E%E8%BF%90%E7%AE%97/"/>
+    <id>http://yoursite.com/2020/03/16/2020/通过字节码理解自增运算/</id>
+    <published>2020-03-15T16:00:00.000Z</published>
+    <updated>2020-03-17T14:47:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>文/年容</p><p>今天碰到一个题，然后尹小凡、覃小善、彭大年等三人挺感兴趣，遂立了个flag要搞清楚一下，然后也算有了今年的第一篇博文了。</p><p>源码如下，最后i、j、k的值为多少？</p><pre><code class="java">package io.github.ryan.simple;public class Increment {    public void inc() {        int i = 1, j, k;        i = i++;        j = i++;        k = i + ++i * i++;    }}</code></pre><p>通过IntelliJ的ASM Bytecode Outline插件获取到inc()方法字节码操作顺序如下：</p><pre><code class="java">MAXSTACK  = 3    // 最大栈深为3MAXLOCALS = 4    // 最大局部变量表长度为4public inc()V   L0    LINENUMBER 5 // 执行后栈深为0，1#屉i为1    ICONST_1     // 常量1入栈       ISTORE 1     // 常量1出栈并装入1#屉    L1    LINENUMBER 6 // 执行后栈深为0，1#屉i为1    ILOAD 1      // 1#屉的值1入栈          IINC 1 1     // 1#屉的值1自增为2        ISTORE 1     // 栈顶值1出栈并装入1#屉   L2    LINENUMBER 7 // 执行后栈深为0，1#屉i为1，2#屉j为1    ILOAD 1      // 1#屉的值1入栈    IINC 1 1     // 1#屉的值1自增为2    ISTORE 2     // 栈顶值1出栈装入2#屉   L3    LINENUMBER 8 // 执行后栈深为0，局部变量表长为4    ILOAD 1      // 1#屉值2入栈，栈深为1    IINC 1 1     // 1#屉的值2自增为3    ILOAD 1      // 1#屉值3入栈，栈深为2    ILOAD 1      // 1#屉值3入栈，栈深为3    IINC 1 1     // 1#屉值3自增为4    IMUL         // 栈顶两个值相乘 3 * 3，并将结果入栈，栈深为2    IADD         // 栈顶两个值相加 9 + 2，并将结果入栈，栈深为1    ISTORE 3     // 栈顶值11出栈装入3#屉，栈深为0   L4    LINENUMBER 9     RETURN</code></pre><p>几点说明：</p><ul><li>局部变量表可以看成是一排有编号的抽屉（从0开始编号），用于存放方法参数和局部变量。奇怪的是，看起来它的最大长度应该为3才对，因为inc()方法没有参数，并且只有i、j、k三个局部变量，可为什么最大长度会是4呢？因为对于非静态方法，0#屉存放的是方法所属对象的引用</li><li>L0、L1、L2等表示标签，L代表label</li><li>多数指令是对操作栈的数进行操作的，IINC指令则比较特别，它直接对局部变量表上的数进行操作</li><li>本想用Sketch画下图的，但是天色太晚了，有问题请无情指出</li><li>i = 4，j = 1，k = 11</li></ul><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul><li><a href="https://dzone.com/articles/introduction-to-java-bytecode" target="_blank" rel="noopener">https://dzone.com/articles/introduction-to-java-bytecode</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;文/年容&lt;/p&gt;
+&lt;p&gt;今天碰到一个题，然后尹小凡、覃小善、彭大年等三人挺感兴趣，遂立了个flag要搞清楚一下，然后也算有了今年的第一篇博文了。&lt;/p&gt;
+&lt;p&gt;源码如下，最后i、j、k的值为多少？&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;package io
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>The Best Moments Of 2019</title>
     <link href="http://yoursite.com/2019/12/31/2019/The%20Best%20Moments%20Of%202019/"/>
     <id>http://yoursite.com/2019/12/31/2019/The Best Moments Of 2019/</id>
     <published>2019-12-30T16:00:00.000Z</published>
-    <updated>2020-01-17T16:44:13.348Z</updated>
+    <updated>2020-03-20T12:22:28.000Z</updated>
     
-    <content type="html"><![CDATA[<p>文/年容</p><p>老规矩，先扯淡。</p><p><img src="https://cdn.jsdelivr.net/gh/pengnianrong/bed/img/IMG_3600.JPG" alt=""></p><p>人不可避免地会认清现实，如果就此粗暴地用二分法做个分类的话，我想大概可以这样：80%的人认清了现实，另外20%的人同样认清了现实但依然足够聪明地保持了乐观、有趣和善良。大部分人属于前者，盖茨和马云这些人属于后者，而我，眼界还不够开，对这个世界认知尚浅，故而，经常性乐观，阶段性有趣，间歇性善良。</p><p>扯淡结束，以下为正文( <del>流水账</del> ）</p><p>Jun.7 上海<br>和小我几岁的姐一起参加VueConf2019🙃<br><img src="https://cdn.jsdelivr.net/gh/pengnianrong/bed/img/IMG_0564.JPG" alt=""></p><p>Jun.9 杭州<br>毕业后第一次见帅东。明年见面，我会将头发梳成大人模样，你会穿上一身帅气西装。<br><img src="https://cdn.jsdelivr.net/gh/pengnianrong/bed/img/IMG_0571.JPG" alt=""></p><p>Sep.15 较场尾<br>覃小善、尹小凡、王小帅、彭大年，“四人帮”。<br><img src="https://cdn.jsdelivr.net/gh/pengnianrong/bed/img/20190915_105703326_iOS 2.JPG" alt=""></p><p>Oct.6 珠海<br>又见希少，无法复制的希少。八年来人群中不曾有一份拷贝。<br><img src="https://cdn.jsdelivr.net/gh/pengnianrong/bed/img/20191007_113924000_iOS.JPG" alt=""></p><p>Nov.4 深圳<br>Sharing special dinner with awesome boys (Yup,Mac included) and girls.<br><img src="https://cdn.jsdelivr.net/gh/pengnianrong/bed/img/20191104_130626610_iOS.JPG" alt=""></p><p>Nov.23 深圳<br>遇见开言，说英语最多的一年。认识了很多热情、向上的人。<br><img src="https://cdn.jsdelivr.net/gh/pengnianrong/bed/img/20191123_153958827_iOS.JPG" alt=""></p><p>Dec.29 深圳<br>The book sent by Haley and the words sent by Mac.Love it sooo much,Thank Q.<br><img src="https://cdn.jsdelivr.net/gh/pengnianrong/bed/img/IMG_0369.JPG" alt=""></p><p>Dec.30 深圳<br>翻了一下通话记录，今年通话最多的这个人，你站在那别动，我去买点橘子。<br><img src="https://cdn.jsdelivr.net/gh/pengnianrong/bed/img/20191208_014814629_iOS 2.JPG" alt=""></p><p>Dec.31 深圳<br>梅花曾落满过南山，我相信有人会骑马归来。</p><p>当世界年纪还小的时候，南瓜不说话，默默成长着，2020三个关键词:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>小工到砖家，做有用的产品</span><br><span class="line"><span class="number">2.</span>口语流利说，开启新的视角</span><br><span class="line"><span class="number">3.</span>呵，我怎么会把新的花裤衩全抖出来</span><br></pre></td></tr></table></figure></p><p>今晚深圳湾老地方“跨年演唱会”，欢迎来投币( <del>不投也成</del> )！</p><p>预祝新年快乐！</p>]]></content>
+    <content type="html"><![CDATA[<p>文/年容</p><p>老规矩，先扯淡。</p><p><img src="https://cdn.jsdelivr.net/gh/pengnianrong/bed/img/IMG_3600.JPG" alt=""></p><p>人不可避免地会认清现实，如果就此粗暴地用二分法做个分类的话，我想大概可以这样：80%的人认清了现实，另外20%的人同样认清了现实但依然足够聪明地保持了乐观、有趣和善良。大部分人属于前者，盖茨和马云这些人属于后者，而我，眼界还不够开，对这个世界认知尚浅，故而，经常性乐观，阶段性有趣，间歇性善良。</p><p>扯淡结束，以下为正文( <del>流水账</del> ）</p><p>Jun.7 上海<br>和小我几岁的姐一起参加VueConf2019🙃<br><img src="https://cdn.jsdelivr.net/gh/pengnianrong/bed/img/IMG_0564.JPG" alt=""></p><p>Jun.9 杭州<br>毕业后第一次见帅东。明年见面，我会将头发梳成大人模样，你会穿上一身帅气西装。<br><img src="https://cdn.jsdelivr.net/gh/pengnianrong/bed/img/IMG_0571.JPG" alt=""></p><p>Sep.15 较场尾<br>覃小善、尹小凡、王小帅、彭大年，“四人帮”。<br><img src="https://cdn.jsdelivr.net/gh/pengnianrong/bed/img/20190915_105703326_iOS 2.JPG" alt=""></p><p>Oct.6 珠海<br>又见希少，无法复制的希少。八年来人群中不曾有一份拷贝。<br><img src="https://cdn.jsdelivr.net/gh/pengnianrong/bed/img/20191007_113924000_iOS.JPG" alt=""></p><p>Nov.4 深圳<br>Sharing special dinner with awesome boys (Yup,Mac included) and girls.<br><img src="https://cdn.jsdelivr.net/gh/pengnianrong/bed/img/20191104_130626610_iOS.JPG" alt=""></p><p>Nov.23 深圳<br>遇见开言，说英语最多的一年。认识了很多热情、向上的人。<br><img src="https://cdn.jsdelivr.net/gh/pengnianrong/bed/img/20191123_153958827_iOS.JPG" alt=""></p><p>Dec.29 深圳<br>The book sent by Haley and the words sent by Mac.Love it sooo much,Thank Q.<br><img src="https://cdn.jsdelivr.net/gh/pengnianrong/bed/img/IMG_0369.JPG" alt=""></p><p>Dec.30 深圳<br>翻了一下通话记录，今年通话最多的这个人，你站在那别动，我去买点橘子。<br><img src="https://cdn.jsdelivr.net/gh/pengnianrong/bed/img/20191208_014814629_iOS 2.JPG" alt=""></p><p>Dec.31 深圳<br>梅花曾落满过南山，我相信有人会骑马归来。</p><p>当世界年纪还小的时候，南瓜不说话，默默成长着，2020三个关键词:</p><blockquote><p>1.小工到砖家，做有用的产品<br>2.口语流利说，开启新的视角<br>3.呵，我怎么会把新的花裤衩全抖出来</p></blockquote><p>今晚深圳湾老地方“跨年演唱会”，欢迎来投币( <del>不投也成</del> )！</p><p>预祝新年快乐！</p>]]></content>
     
     <summary type="html">
     
@@ -45,19 +143,16 @@
     <link href="http://yoursite.com/2019/10/06/2019/70/"/>
     <id>http://yoursite.com/2019/10/06/2019/70/</id>
     <published>2019-10-05T16:00:00.000Z</published>
-    <updated>2019-10-05T23:21:19.132Z</updated>
+    <updated>2020-03-16T12:42:11.000Z</updated>
     
-    <content type="html"><![CDATA[<p>文/年容</p><ul><li>人的痛苦，本质上都来自于对自己无能的愤怒</li><li>除了聪明，善良是另一种提高工作效率的手段</li></ul>]]></content>
+    <content type="html"><![CDATA[<p>文/年容</p><p>0.人的痛苦，本质上都来自于对自己无能的愤怒<br>1.除了聪明，善良是另一种提高工作效率的手段</p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;p&gt;文/年容&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;人的痛苦，本质上都来自于对自己无能的愤怒&lt;/li&gt;
-&lt;li&gt;除了聪明，善良是另一种提高工作效率的手段&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;0.人的痛苦，本质上都来自于对自己无能的愤怒&lt;br&gt;1.除了聪明，善良是另一种提高工作效率的手段&lt;/p&gt;
 
       
     
@@ -71,21 +166,17 @@
     <link href="http://yoursite.com/2019/07/06/2019/%E4%B8%A4%E6%9D%A1%E8%AE%A4%E8%AF%86/"/>
     <id>http://yoursite.com/2019/07/06/2019/两条认识/</id>
     <published>2019-07-05T16:00:00.000Z</published>
-    <updated>2019-10-05T23:33:20.174Z</updated>
+    <updated>2020-03-08T13:43:50.000Z</updated>
     
-    <content type="html"><![CDATA[<p>文/年容</p><ul><li><p>天道酬巧</p></li><li><p>人际关系的本质是价值的潜在交换</p></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>文/年容</p><p>0.天道酬巧</p><p>1.人际关系的本质是价值的潜在交换</p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;p&gt;文/年容&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;天道酬巧&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;人际关系的本质是价值的潜在交换&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;0.天道酬巧&lt;/p&gt;
+&lt;p&gt;1.人际关系的本质是价值的潜在交换&lt;/p&gt;
 
       
     
@@ -99,7 +190,7 @@
     <link href="http://yoursite.com/2019/06/22/2019/%E4%B8%80%E6%AC%A1%E7%B2%97%E9%84%99%E7%9A%84%E6%8F%A3%E6%B5%8B%E5%90%8E%E7%9A%84%E5%8F%8D%E7%9C%81/"/>
     <id>http://yoursite.com/2019/06/22/2019/一次粗鄙的揣测后的反省/</id>
     <published>2019-06-21T16:00:00.000Z</published>
-    <updated>2019-06-22T05:40:53.298Z</updated>
+    <updated>2019-06-22T05:40:53.000Z</updated>
     
     <content type="html"><![CDATA[<p>文/年容</p><p>粗制滥造的人<br>每一次的愚蠢<br>无一例外<br>都无聊极了<br>在刺骨的失眠瓦解、散去之前<br>月亮也觉得不胜其烦</p>]]></content>
     
@@ -122,19 +213,18 @@
     <link href="http://yoursite.com/2019/06/19/2019/%E4%B8%8B%E9%9B%86/"/>
     <id>http://yoursite.com/2019/06/19/2019/下集/</id>
     <published>2019-06-18T16:00:00.000Z</published>
-    <updated>2019-06-22T05:20:35.723Z</updated>
+    <updated>2020-03-08T13:46:02.000Z</updated>
     
-    <content type="html"><![CDATA[<p>文/年容</p><blockquote><p>从某处偷来的一段话</p></blockquote><p>感情里最棒的状态是，我的一切付出都是一场心甘情愿，我对此绝口不提。你若投桃报李，我会十分感激；你若无动于衷，我也不会灰心丧气。直到有一天我不愿再这般爱你。</p>]]></content>
+    <content type="html"><![CDATA[<p>文/年容</p><p>从某处偷来的一段话</p><p>感情里最棒的状态是，我的一切付出都是一场心甘情愿，我对此绝口不提。你若投桃报李，我会十分感激；你若无动于衷，我也不会灰心丧气。直到有一天我不愿再这般爱你。</p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;p&gt;文/年容&lt;/p&gt;
-&lt;blockquote&gt;
 &lt;p&gt;从某处偷来的一段话&lt;/p&gt;
-&lt;/blockquote&gt;
 &lt;p&gt;感情里最棒的状态是，我的一切付出都是一场心甘情愿，我对此绝口不提。你若投桃报李，我会十分感激；你若无动于衷，我也不会灰心丧气。直到有一天我不愿再这般爱你。&lt;/p&gt;
+
       
     
     </summary>
@@ -147,7 +237,7 @@
     <link href="http://yoursite.com/2019/05/20/2019/%E4%B8%AD%E9%9B%86/"/>
     <id>http://yoursite.com/2019/05/20/2019/中集/</id>
     <published>2019-05-19T16:00:00.000Z</published>
-    <updated>2019-05-24T16:09:38.747Z</updated>
+    <updated>2019-05-24T16:09:38.000Z</updated>
     
     <content type="html"><![CDATA[<p>文/年容</p><p>后来的我们<br>亲手撕碎了所有细腻<br>各自心安<br>有些爱情从结束开始<br>有些爱情刚开始就已结束<br>文字会收笔<br>故事会烂尾<br>我的爱情<br>今夜，你不必回</p>]]></content>
     
@@ -170,9 +260,9 @@
     <link href="http://yoursite.com/2019/04/05/2019/Vue%E5%BA%94%E7%94%A8%E6%98%AF%E5%A6%82%E4%BD%95%E5%BD%A2%E6%88%90%E7%9A%84/"/>
     <id>http://yoursite.com/2019/04/05/2019/Vue应用是如何形成的/</id>
     <published>2019-04-04T16:00:00.000Z</published>
-    <updated>2019-12-17T01:57:30.032Z</updated>
+    <updated>2019-12-17T01:57:30.000Z</updated>
     
-    <content type="html"><![CDATA[<p>文/年容</p><p>先扯淡。</p><p>最近在果壳网看到<a href="https://www.guokr.com/article/445991/" target="_blank" rel="noopener"><span>一篇文章</span></a>解释了一个问题：为什么不管是坐在写字楼的办公位敲打键盘还是行走于施工一线挥汗如雨都会让人觉得劳累。我总结了一下原因：从被动的努力中获取不到满足感使人疲惫。解释一下就是内心是想刷微博刷朋友圈追剧搓麻打牌的，但是又因为生活所迫不得不”努力”地搬砖维持生计从而导致疲劳。换句话说那些发自内心喜欢自己工作的人从来不会感到疲倦。能从工作中真正获得满足感和自由的人100个里头也许只有一个吧。</p><p>闲扯结束，来聊点伪技术。</p><p>不知道你们觉得Vue里头最简洁的一个函数是什么？先来看几行代码。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App.vue'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  render: <span class="function"><span class="params">h</span> =&gt;</span> h(App),</span><br><span class="line">&#125;).$mount(<span class="string">'#app'</span>)</span><br></pre></td></tr></table></figure><p>应该不陌生，通过使用Vue CLI构建出一个最简单的项目，在项目的src目录下的main.js文件里能找到这几行代码。以上几行代码的作用是渲染传递给h函数的根组件即App后挂载到DOM节点树上。为了方便，我做了一个简单的目录树（去除了一些与本主题无关的目录或文件）。</p><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vue-demo</span><br><span class="line">├── public</span><br><span class="line">│   └── index<span class="selector-class">.html</span></span><br><span class="line">└── src</span><br><span class="line">    ├── App<span class="selector-class">.vue</span></span><br><span class="line">    ├── components</span><br><span class="line">    │   └── HelloWorld<span class="selector-class">.vue</span></span><br><span class="line">    └── main<span class="selector-class">.js</span></span><br></pre></td></tr></table></figure><p>作为一个新手，以我狭隘的视野去看，render函数的简洁着实让我感到惊讶。render是一个函数，给render传进去的参数h也是一个函数,h函数接收的参数是App。这行代码很简短却做了好多事情。所以我之前提到的最简洁的函数指的也就是它了。有个一开始让我很摸不着头脑的问题是为啥取了个h这么无厘头名称做参数名。google一番后在<a href="https://css-tricks.com/what-does-the-h-stand-for-in-vues-render-method/" target="_blank" rel="noopener"><span>这篇文章<span></span></span></a>里找到了答案。大致意思是h是hyperscritpt的缩写，把h(App)理解为一个动词就是使得App成为DOM, 准确的说h(App)返回的应该是一个虚拟DOM。至于虚拟DOM这种东西是什么就不讲了，因为我也不知道。来看我从VueMastery官网课程中截取的一张图。</p><p><img src="https://raw.githubusercontent.com/pengnianrong/bed/master/img/Vue%E5%8E%9F%E7%90%86-1.png" alt="Vue原理-1"></p><p>main.js右边的类似于盒子的东西就是就是render函数了，暂时取个比较俗的名字管它叫渲染器吧。所有子组件，比如HelloWorld等组件的归属最终都是App，所以只要把App传递进渲染器中就能渲染整个Vue应用了。大致的流程就是先将App这个根组件放到渲染器中进行渲染，渲染完成后会把渲染结果通过$mount()函数挂载到index.html文件中id为app的div下，这样整个应用就形成了。</p><p>这就是一个励志于成为一个偏后端的临栈Java工程师的第一篇伪技术博文了。如有错误，请无情的批评指正。下一篇准备写下Docker。基本月更，别太惦记。</p>]]></content>
+    <content type="html"><![CDATA[<p>文/年容</p><p>先扯淡。</p><p>最近在果壳网看到<a href="https://www.guokr.com/article/445991/" target="_blank" rel="noopener"><span>一篇文章</span></a>解释了一个问题：为什么不管是坐在写字楼的办公位敲打键盘还是行走于施工一线挥汗如雨都会让人觉得劳累。我总结了一下原因：从被动的努力中获取不到满足感使人疲惫。解释一下就是内心是想刷微博刷朋友圈追剧搓麻打牌的，但是又因为生活所迫不得不”努力”地搬砖维持生计从而导致疲劳。换句话说那些发自内心喜欢自己工作的人从来不会感到疲倦。能从工作中真正获得满足感和自由的人100个里头也许只有一个吧。</p><p>闲扯结束，来聊点伪技术。</p><p>不知道你们觉得Vue里头最简洁的一个函数是什么？先来看几行代码。</p><pre><code class="javascript">import Vue from &#39;vue&#39;import App from &#39;./App.vue&#39;new Vue({  render: h =&gt; h(App),}).$mount(&#39;#app&#39;)</code></pre><p>应该不陌生，通过使用Vue CLI构建出一个最简单的项目，在项目的src目录下的main.js文件里能找到这几行代码。以上几行代码的作用是渲染传递给h函数的根组件即App后挂载到DOM节点树上。为了方便，我做了一个简单的目录树（去除了一些与本主题无关的目录或文件）。</p><pre><code class="scss">vue-demo├── public│   └── index.html└── src    ├── App.vue    ├── components    │   └── HelloWorld.vue    └── main.js</code></pre><p>作为一个新手，以我狭隘的视野去看，render函数的简洁着实让我感到惊讶。render是一个函数，给render传进去的参数h也是一个函数,h函数接收的参数是App。这行代码很简短却做了好多事情。所以我之前提到的最简洁的函数指的也就是它了。有个一开始让我很摸不着头脑的问题是为啥取了个h这么无厘头名称做参数名。google一番后在<a href="https://css-tricks.com/what-does-the-h-stand-for-in-vues-render-method/" target="_blank" rel="noopener"><span>这篇文章<span></span></span></a>里找到了答案。大致意思是h是hyperscritpt的缩写，把h(App)理解为一个动词就是使得App成为DOM, 准确的说h(App)返回的应该是一个虚拟DOM。至于虚拟DOM这种东西是什么就不讲了，因为我也不知道。来看我从VueMastery官网课程中截取的一张图。</p><p><img src="https://raw.githubusercontent.com/pengnianrong/bed/master/img/Vue%E5%8E%9F%E7%90%86-1.png" alt="Vue原理-1"></p><p>main.js右边的类似于盒子的东西就是就是render函数了，暂时取个比较俗的名字管它叫渲染器吧。所有子组件，比如HelloWorld等组件的归属最终都是App，所以只要把App传递进渲染器中就能渲染整个Vue应用了。大致的流程就是先将App这个根组件放到渲染器中进行渲染，渲染完成后会把渲染结果通过$mount()函数挂载到index.html文件中id为app的div下，这样整个应用就形成了。</p><p>这就是一个励志于成为一个偏后端的临栈Java工程师的第一篇伪技术博文了。如有错误，请无情的批评指正。下一篇准备写下Docker。基本月更，别太惦记。</p>]]></content>
     
     <summary type="html">
     
@@ -193,7 +283,7 @@
     <link href="http://yoursite.com/2019/03/15/2019/%E4%B8%80%E6%AC%A1%E5%BE%97%E4%BD%93%E7%9A%84%E8%87%AA%E5%98%B2/"/>
     <id>http://yoursite.com/2019/03/15/2019/一次得体的自嘲/</id>
     <published>2019-03-14T16:00:00.000Z</published>
-    <updated>2019-03-16T10:22:01.475Z</updated>
+    <updated>2019-03-16T10:22:01.000Z</updated>
     
     <content type="html"><![CDATA[<p>文/年容</p><p>中国就两所大学：清北加起来是一所，其他大学算一所。而我还在幼儿园大班胡作非为。</p>]]></content>
     
@@ -216,7 +306,7 @@
     <link href="http://yoursite.com/2019/02/14/2019/%E8%87%B4%E6%9C%AA%E6%9D%A5%E7%9A%84%E5%B0%8F%E5%A4%AA%E9%98%B3/"/>
     <id>http://yoursite.com/2019/02/14/2019/致未来的小太阳/</id>
     <published>2019-02-13T16:00:00.000Z</published>
-    <updated>2019-02-14T05:00:42.880Z</updated>
+    <updated>2019-02-14T05:00:42.000Z</updated>
     
     <content type="html"><![CDATA[<p>文/年容</p><p>彗星绕太阳一周要百万年<br>我没那么贪婪<br>余生刚好</p>]]></content>
     
@@ -239,16 +329,17 @@
     <link href="http://yoursite.com/2018/12/31/2018/Toast%20This%20New%20World/"/>
     <id>http://yoursite.com/2018/12/31/2018/Toast This New World/</id>
     <published>2018-12-30T16:00:00.000Z</published>
-    <updated>2019-04-05T06:00:20.160Z</updated>
+    <updated>2020-03-15T00:00:28.000Z</updated>
     
-    <content type="html"><![CDATA[<p>文/年容</p><p><img src="https://upload-images.jianshu.io/upload_images/4957551-0a481597bd77477e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>Last year on the same day I wrote an article titled <em>Toast this new world</em> in Chinese.This time I will write it in English,It is not because of the improvement of my English skills but just a sudden inspiration.There must be many grammar mistakes,but it doesn’t matter.</p><h2 id="Stress"><a href="#Stress" class="headerlink" title="Stress"></a>Stress</h2><p>The first thing I want to talk about is how to reduce stress.At one time,to become an entrepreneur was something like one of my missions and it was so important that I could barely sleep at night,even though I didn’t know where to start with it.I thought that it was a waste of life if I went to do something else.It feels like I’m in a jail,and have a great idea in my mind,but all what I can do is nothing.I learned from my last job that the way to solve problems was to persevere through any pain.But this approach didn’t seem to work with reducing my stress.finally,I realized that I should figure out what was really driving my stress.I  was lucky enough to work out the problem,I was just in a big rush to seek success. </p><p>I found that the founder of Zealer Wang Ziru and the CEO of Smartisan Luo Yonghao,They both are good at speaking,knowing a lot in their fileds,having their own unique personalities.They are typical entrepreneurs.But both of them are experiencing their hard time.The earlier I know that good fortune is as important as capability the better.I learned from an article that an important key for us to reduce stress is starting small,because we can’t take on stress in a stressful way.In conclusion,the key is to do less than I feel I want to.</p><h2 id="Programming"><a href="#Programming" class="headerlink" title="Programming"></a>Programming</h2><p>Here comes the programming part.This year I work for a new company as a web developer.I have made a lot of new friends in this two years.most of them are developers. I think one common mistake that many developers do is saying ‘’I work as a coder because of the high income”.most of us work for money,not work for fun.I don’t know how to refute it,but what I’m trying to say is if we find a job we love,we really don’t have to work anymore.Another mistake  that many developers make is they think coders  can’t move on after their age 30.I just can’t wait to share <a href="http://www.norvig.com/21-days.html" target="_blank" rel="noopener"><span>THIS ARTICLE<span></span></span></a> written by Peter Norvig with these friends.it’s really helpful.</p><p>Programming is something I really love.when I was in middle school,I was fanscinated with physics.It was really funny when I saw the small bulb lightened up.And all what I need was several apples and copper wires.As for programming,all what I need is a computer,I can create anything that I can imagine with this machine.This is a kind of happiness at my fingertips.It is worth a whole lifetime. </p><h2 id="Education"><a href="#Education" class="headerlink" title="Education"></a>Education</h2><p>In the last part I want to share some thoughts on education. I’m not going to complain about the backwardness of China’s education system.It makes no sense.I’ve always wondered how much can technology improve students’ learning.What can companies do for education.How can we do better to improve the ability to teach ourself things after graduated from school.What can we do to help parents learn new things in the 21st century.</p><p>I’m always optimistic about the huge impact that technology will have on education.There are a lot of great software, one is minecraft,a game allows players to build with a variety of different blocks in a 3D procedurally generated world,requiring creativity from players,that can help release students’ creativity and imagination.Tablets in classrooms can broaden students’ understanding of knowledge.And big data analysis can help us gain insights into education(like which schools do the best job of teaching low-income students)</p><p>This is all of my thoughts I want to share with you as my 2018 concludes.Turn right,and see you in another life folks,I hope you have a happy and healthy start to 2019.</p>]]></content>
+    <content type="html"><![CDATA[<p>文/年容</p><p><img src="https://cdn.jsdelivr.net/gh/onemason/bed@master/uPic/toast%20this%20new%20world.jpg" alt=""></p><p>Last year on the same day I wrote an article titled <em>Toast this new world</em> in Chinese.This time I will write it in English,It is not because of the improvement of my English skills but just a sudden inspiration.There must be many grammar mistakes,but it doesn’t matter.</p><h2 id="Stress"><a href="#Stress" class="headerlink" title="Stress"></a>Stress</h2><p>The first thing I want to talk about is how to reduce stress.At one time,to become an entrepreneur was something like one of my missions and it was so important that I could barely sleep at night,even though I didn’t know where to start with it.I thought that it was a waste of life if I went to do something else.It feels like I’m in a jail,and have a great idea in my mind,but all what I can do is nothing.I learned from my last job that the way to solve problems was to persevere through any pain.But this approach didn’t seem to work with reducing my stress.finally,I realized that I should figure out what was really driving my stress.I  was lucky enough to work out the problem,I was just in a big rush to seek success. </p><p>I found that the founder of Zealer Wang Ziru and the CEO of Smartisan Luo Yonghao,They both are good at speaking,knowing a lot in their fileds,having their own unique personalities.They are typical entrepreneurs.But both of them are experiencing their hard time.The earlier I know that good fortune is as important as capability the better.I learned from an article that an important key for us to reduce stress is starting small,because we can’t take on stress in a stressful way.In conclusion,the key is to do less than I feel I want to.</p><h2 id="Programming"><a href="#Programming" class="headerlink" title="Programming"></a>Programming</h2><p>Here comes the programming part.This year I work for a new company as a web developer.I have made a lot of new friends in this two years.most of them are developers. I think one common mistake that many developers do is saying ‘’I work as a coder because of the high income”.most of us work for money,not work for fun.I don’t know how to refute it,but what I’m trying to say is if we find a job we love,we really don’t have to work anymore.Another mistake  that many developers make is they think coders  can’t move on after their age 30.I just can’t wait to share <a href="http://www.norvig.com/21-days.html" target="_blank" rel="noopener"><span>THIS ARTICLE<span></span></span></a> written by Peter Norvig with these friends.it’s really helpful.</p><p>Programming is something I really love.when I was in middle school,I was fanscinated with physics.It was really funny when I saw the small bulb lightened up.And all what I need was several apples and copper wires.As for programming,all what I need is a computer,I can create anything that I can imagine with this machine.This is a kind of happiness at my fingertips.It is worth a whole lifetime. </p><h2 id="Education"><a href="#Education" class="headerlink" title="Education"></a>Education</h2><p>In the last part I want to share some thoughts on education. I’m not going to complain about the backwardness of China’s education system.It makes no sense.I’ve always wondered how much can technology improve students’ learning.What can companies do for education.How can we do better to improve the ability to teach ourself things after graduated from school.What can we do to help parents learn new things in the 21st century.</p><p>I’m always optimistic about the huge impact that technology will have on education.There are a lot of great software, one is minecraft,a game allows players to build with a variety of different blocks in a 3D procedurally generated world,requiring creativity from players,that can help release students’ creativity and imagination.Tablets in classrooms can broaden students’ understanding of knowledge.And big data analysis can help us gain insights into education(like which schools do the best job of teaching low-income students)</p><p>This is all of my thoughts I want to share with you as my 2018 concludes.Turn right,and see you in another life folks,I hope you have a happy and healthy start to 2019.</p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;p&gt;文/年容&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/4957551-0a481597bd77477e.jpg?imageMogr2/auto-orient/strip%7CimageVie
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/onemason/bed@master/uPic/toast%20this%20new%20world.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Last year on th
       
     
     </summary>
@@ -261,7 +352,7 @@
     <link href="http://yoursite.com/2018/10/22/2018/%E4%B8%8A%E9%9B%86/"/>
     <id>http://yoursite.com/2018/10/22/2018/上集/</id>
     <published>2018-10-21T16:00:00.000Z</published>
-    <updated>2019-01-01T06:18:06.001Z</updated>
+    <updated>2019-01-01T06:18:06.000Z</updated>
     
     <content type="html"><![CDATA[<p>文/年容</p><p>像是<br>书房透过窗外的景<br>偶尔的蝉鸣<br>天的云<br>树的风<br>无关喧嚣<br>你的静</p><p>像是<br>独自一人走过的岸<br>飘来的凉<br>海的浪<br>水的沙<br>人不由己<br>我的想</p>]]></content>
     
@@ -285,15 +376,16 @@
     <link href="http://yoursite.com/2018/09/11/2018/%E7%A7%8D%E5%AD%90%E5%BF%83%E4%BA%8B/"/>
     <id>http://yoursite.com/2018/09/11/2018/种子心事/</id>
     <published>2018-09-10T16:00:00.000Z</published>
-    <updated>2019-01-26T07:01:39.722Z</updated>
+    <updated>2020-03-08T13:44:50.000Z</updated>
     
-    <content type="html"><![CDATA[<p>文/年容<br><img src="https://upload-images.jianshu.io/upload_images/4957551-97aede0582644c82.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>即将破壳的种子，<br>要做怎样的抉择？<br>于恬淡安然之处，波澜不惊？<br>于悬崖绝壁之所，遗世独立？<br>他寻觅，<br>向得道的老树，<br>也向挚友，<br>未果。<br>他寻觅，<br>向智慧的蜗牛，<br>也向自己，<br>无眠。<br>也许，拂晓，会带来答案。</p>]]></content>
+    <content type="html"><![CDATA[<p>文/年容</p><p>即将破壳的种子，<br>要做怎样的抉择？<br>于恬淡安然之处，波澜不惊？<br>于悬崖绝壁之所，遗世独立？<br>他寻觅，<br>向得道的老树，<br>也向挚友，<br>未果。<br>他寻觅，<br>向智慧的蜗牛，<br>也向自己，<br>无眠。<br>也许，拂晓，会带来答案。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;文/年容&lt;br&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/4957551-97aede0582644c82.jpg?imageMogr2/auto-orient/strip%7CimageView2/2
+        &lt;p&gt;文/年容&lt;/p&gt;
+&lt;p&gt;即将破壳的种子，&lt;br&gt;要做怎样的抉择？&lt;br&gt;于恬淡安然之处，波澜不惊？&lt;br&gt;于悬崖绝壁之所，遗世独立？&lt;br&gt;他寻觅，&lt;br&gt;向得道的老树，&lt;br&gt;也向挚友，&lt;br&gt;未果。&lt;br&gt;他寻觅，&lt;br&gt;向智慧的蜗牛，&lt;br&gt;也向自己，&lt;br&gt;无眠。&lt;
       
     
     </summary>
@@ -306,15 +398,17 @@
     <link href="http://yoursite.com/2018/09/08/2018/Special-Day/"/>
     <id>http://yoursite.com/2018/09/08/2018/Special-Day/</id>
     <published>2018-09-07T16:00:00.000Z</published>
-    <updated>2019-01-26T07:02:16.697Z</updated>
+    <updated>2020-03-15T00:01:34.000Z</updated>
     
-    <content type="html"><![CDATA[<p>文/年容<br><img src="https://upload-images.jianshu.io/upload_images/4957551-a1a38583ac4cbd15.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>芜杂了心情一整天<br>淅淅沥沥的小雨珠<br>她不再可爱</p>]]></content>
+    <content type="html"><![CDATA[<p>文/年容</p><p>芜杂了心情一整天<br>淅淅沥沥的小雨珠<br>她不再可爱</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;文/年容&lt;br&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/4957551-a1a38583ac4cbd15.jpg?imageMogr2/auto-orient/strip%7CimageView2/2
+        &lt;p&gt;文/年容&lt;/p&gt;
+&lt;p&gt;芜杂了心情一整天&lt;br&gt;淅淅沥沥的小雨珠&lt;br&gt;她不再可爱&lt;/p&gt;
+
       
     
     </summary>
@@ -327,16 +421,17 @@
     <link href="http://yoursite.com/2018/08/27/2018/%E5%83%8F%E6%B0%B4%E4%B8%80%E6%A0%B7/"/>
     <id>http://yoursite.com/2018/08/27/2018/像水一样/</id>
     <published>2018-08-26T16:00:00.000Z</published>
-    <updated>2018-09-01T08:25:48.206Z</updated>
+    <updated>2020-03-08T13:45:12.000Z</updated>
     
-    <content type="html"><![CDATA[<p>文/年容</p><p><img src="https://upload-images.jianshu.io/upload_images/4957551-f695f90b8b3f9bb3.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><blockquote><p>像水一样<br>我想上天<br>就化为蒸汽<br>我想入海<br>就流入小溪<br>我不想搭理这个世界<br>就冰冻自己</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p>文/年容</p><p>像水一样<br>我想上天<br>就化为蒸汽<br>我想入海<br>就流入小溪<br>我不想搭理这个世界<br>就冰冻自己</p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;p&gt;文/年容&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/4957551-f695f90b8b3f9bb3.jpg?imageMogr2/auto-orient/strip%7CimageVie
+&lt;p&gt;像水一样&lt;br&gt;我想上天&lt;br&gt;就化为蒸汽&lt;br&gt;我想入海&lt;br&gt;就流入小溪&lt;br&gt;我不想搭理这个世界&lt;br&gt;就冰冻自己&lt;/p&gt;
+
       
     
     </summary>
@@ -349,15 +444,17 @@
     <link href="http://yoursite.com/2018/08/17/2018/n%2055!w/"/>
     <id>http://yoursite.com/2018/08/17/2018/n 55!w/</id>
     <published>2018-08-16T16:00:00.000Z</published>
-    <updated>2019-01-26T07:02:26.497Z</updated>
+    <updated>2020-03-08T13:47:21.000Z</updated>
     
-    <content type="html"><![CDATA[<p>文/年容<br><img src="https://upload-images.jianshu.io/upload_images/4957551-83035aef7ef7e210.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>不加蒜的白开水<br>可以是天马行空<br>但有人读懂的<br>是匿一个念想<br>再无计可施<br>终有一天<br>看她骑马归来</p>]]></content>
+    <content type="html"><![CDATA[<p>文/年容</p><p>不加蒜的白开水<br>可以是天马行空<br>但有人读懂的<br>是匿一个念想<br>再无计可施<br>终有一天<br>看她骑马归来</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;文/年容&lt;br&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/4957551-83035aef7ef7e210.jpg?imageMogr2/auto-orient/strip%7CimageView2/2
+        &lt;p&gt;文/年容&lt;/p&gt;
+&lt;p&gt;不加蒜的白开水&lt;br&gt;可以是天马行空&lt;br&gt;但有人读懂的&lt;br&gt;是匿一个念想&lt;br&gt;再无计可施&lt;br&gt;终有一天&lt;br&gt;看她骑马归来&lt;/p&gt;
+
       
     
     </summary>
@@ -370,100 +467,16 @@
     <link href="http://yoursite.com/2018/05/20/2018/%E5%A6%82%E6%9E%9C%E6%88%91%E6%98%AF%E4%B8%80%E4%B8%AA%E4%BC%98%E7%A7%80%E7%9A%84%E6%B3%95%E5%9B%BD%E4%BA%BA/"/>
     <id>http://yoursite.com/2018/05/20/2018/如果我是一个优秀的法国人/</id>
     <published>2018-05-19T16:00:00.000Z</published>
-    <updated>2019-01-26T07:04:32.369Z</updated>
+    <updated>2020-03-08T13:47:50.000Z</updated>
     
-    <content type="html"><![CDATA[<p>文/年容<br><img src="https://upload-images.jianshu.io/upload_images/4957551-db310794d432ceed.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>昨夜<br>梦里同你在森林走了很远<br>很远的路<br>如果我是一个优秀的法国人<br>我会拾起一掌半红的枫叶<br>撒向天空<br>与你看它曼妙滑落<br>今晚<br>深圳的街比平时还要热闹<br>熙熙攘攘<br>如果我是一个优秀的法国人<br>我会牵一个穿红鞋的姑娘<br>踩着浪漫<br>迈入一场渺小温馨<br>此时<br>相隔两地的两颗心，萦绕<br>两种情<br>如果我是一个优秀的法国人<br>爱你<br>我本该更加小心翼翼</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;文/年容&lt;br&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/4957551-db310794d432ceed.jpg?imageMogr2/auto-orient/strip%7CimageView2/2
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>想你</title>
-    <link href="http://yoursite.com/2018/04/07/2018/%E6%83%B3%E4%BD%A0/"/>
-    <id>http://yoursite.com/2018/04/07/2018/想你/</id>
-    <published>2018-04-06T16:00:00.000Z</published>
-    <updated>2019-01-26T07:01:26.586Z</updated>
-    
-    <content type="html"><![CDATA[<p>文/年容<br><img src="https://upload-images.jianshu.io/upload_images/4957551-7d7a45c730f7aa5e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>下雨的时候<br>我绝对不会写诗<br>因为除去想你，其他都是多余</p>]]></content>
+    <content type="html"><![CDATA[<p>文/年容</p><p>昨夜<br>梦里同你在森林走了很远<br>很远的路<br>如果我是一个优秀的法国人<br>我会拾起一掌半红的枫叶<br>撒向天空<br>与你看它曼妙滑落<br>今晚<br>深圳的街比平时还要热闹<br>熙熙攘攘<br>如果我是一个优秀的法国人<br>我会牵一个穿红鞋的姑娘<br>踩着浪漫<br>迈入一场渺小温馨<br>此时<br>相隔两地的两颗心，萦绕<br>两种情<br>如果我是一个优秀的法国人<br>爱你<br>我本该更加小心翼翼</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;文/年容&lt;br&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/4957551-7d7a45c730f7aa5e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>检讨信</title>
-    <link href="http://yoursite.com/2018/03/25/2018/%E6%A3%80%E8%AE%A8%E4%BF%A1/"/>
-    <id>http://yoursite.com/2018/03/25/2018/检讨信/</id>
-    <published>2018-03-24T16:00:00.000Z</published>
-    <updated>2018-12-31T01:13:02.496Z</updated>
-    
-    <content type="html"><![CDATA[<p>文/年容<br><img src="https://upload-images.jianshu.io/upload_images/4957551-a22b370603b2d7b4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>亲爱的：<br>这是一份检讨，也是写给你的第一封信。</p><p>现在，先很严肃地，用书面语的方式跟你道歉。</p><p>对不起。对不起是因为你提醒很多遍我都不知道自己的错误在哪，显然我没有那个意识；<br>对不起。对不起是因为你心里有不开心还要忍受不能告诉我，直到你觉得应该严肃处理；<br>对不起。对不起是因为你不高兴的时无法陪在你身边，在你需要我的时候不能给你拥抱。</p><p>对不起。</p><p>现在，也很严肃地，用书面语的方式跟你说谢谢。</p><p>谢谢你。谢谢你是因为你难过的时候你会告诉我，让我不用满世界地寻找你烦恼的源头；<br>谢谢你。谢谢你是因为你总能像去年那样，在我十分压抑的时候带给我很多很多的温柔；<br>谢谢你。谢谢你是因为当初我认为最不可能的事情终究发生，最终有了属于我的小幸运。</p><p>谢谢你。</p><p>现在，也很开心地，用书面语的方式告诉你，跟你在一起的时候很享受。</p><p>我享受。我享受吃饭的时候可以靠着你的头或是看着你的眼睛；<br>我享受。我享受牵你手的时候什么也不用多想、多说，只需要慢慢向前走；<br>我享受。我享受每个叫醒我的早晨，偶尔你急匆匆的样子能感受到的可爱；<br>我享受，我享受每天能准点接收到你的消息，被告知，想我，爱我；<br>我享受。我享受接下来的人生与你一起成长，成熟。</p><p>当从听情歌不能自拔，<br>转而听摇滚欲罢不能，<br>我走路的姿势，<br>就像是一部狂草；</p><p>当生活将要暗淡无彩<br>你突然带来一线晨光<br>这部狂草，<br>注定要与你一同书写。</p><p>如果你没有出现<br>不知在未来的未知里，<br>会流浪多久。</p><p>想你，爱你，晚安！</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;文/年容&lt;br&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/4957551-a22b370603b2d7b4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>00:33</title>
-    <link href="http://yoursite.com/2018/02/16/2018/00-33/"/>
-    <id>http://yoursite.com/2018/02/16/2018/00-33/</id>
-    <published>2018-02-15T16:00:00.000Z</published>
-    <updated>2019-01-26T07:28:50.887Z</updated>
-    
-    <content type="html"><![CDATA[<p>文/年容<br>美好的开始，愿不负卿，不负己，不负时光。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;文/年容&lt;br&gt;美好的开始，愿不负卿，不负己，不负时光。&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>左心房不会说谎</title>
-    <link href="http://yoursite.com/2018/02/14/2018/%E5%B7%A6%E5%BF%83%E6%88%BF%E4%B8%8D%E4%BC%9A%E8%AF%B4%E8%B0%8E/"/>
-    <id>http://yoursite.com/2018/02/14/2018/左心房不会说谎/</id>
-    <published>2018-02-13T16:00:00.000Z</published>
-    <updated>2019-01-26T07:03:00.097Z</updated>
-    
-    <content type="html"><![CDATA[<p>文/年容<br><img src="http://upload-images.jianshu.io/upload_images/4957551-ea620c9388a4ace5.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_9964.JPG"><br>为你许下，一世格桑，久久长长；<br>不及送你，一束红玫，暮暮朝朝。<br>与你食得，一日三餐，平平淡淡；<br>不及享受，一回拥抱，秒秒分分。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;文/年容&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/4957551-ea620c9388a4ace5.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/
+        &lt;p&gt;文/年容&lt;/p&gt;
+&lt;p&gt;昨夜&lt;br&gt;梦里同你在森林走了很远&lt;br&gt;很远的路&lt;br&gt;如果我是一个优秀的法国人&lt;br&gt;我会拾起一掌半红的枫叶&lt;br&gt;撒向天空&lt;br&gt;与你看它曼妙滑落&lt;br&gt;今晚&lt;br&gt;深圳的街比平时还要热闹&lt;br&gt;熙熙攘攘&lt;br&gt;如果我是一个优秀的法国人&lt;br&gt;
       
     
     </summary>
