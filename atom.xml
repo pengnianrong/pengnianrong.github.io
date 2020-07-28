@@ -46,7 +46,7 @@
     <published>2020-04-01T16:00:00.000Z</published>
     <updated>2020-04-01T16:05:54.000Z</updated>
     
-    <content type="html"><![CDATA[<p>文/年容</p><p>踩坑日记，简单记录。</p><pre><code class="java">server {    listen       8088;    server_name  localhost;    #第1处    location /html {      root   /Users/pengnr/Desktop/;      index  index.html index.htm;    }    #第2处    location /html {      alias  /Users/pengnr/Desktop/html/;      index  index.html index.htm;    }}</code></pre><p>静态资源的绝对路径相同，访问<a href="http://localhost:8088/html，找到静态资源的方式如下：" target="_blank" rel="noopener">http://localhost:8088/html，找到静态资源的方式如下：</a></p><p>第1处</p><p>/Users/pengnr/Desktop/ + html  <strong>&gt;&gt;&gt;</strong>  /Users/pengnr/Desktop/html</p><p>第2处</p><p>/html  <strong>&gt;&gt;&gt;</strong>  /Users/pengnr/Desktop/html/</p><p><strong>注意第2处alias结尾有反斜杠，第1处root结尾反斜杠可有可无</strong></p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul><li>极客时间《Nginx核心知识100讲》陶辉</li></ul>]]></content>
+    <content type="html"><![CDATA[<p>文/年容</p><p>踩坑日记，简单记录。</p><pre><code class="line-numbers language-java">server {    listen       8088;    server_name  localhost;    #第1处    location /html {      root   /Users/pengnr/Desktop/;      index  index.html index.htm;    }    #第2处    location /html {      alias  /Users/pengnr/Desktop/html/;      index  index.html index.htm;    }}</code></pre><p>静态资源的绝对路径相同，访问<a href="http://localhost:8088/html，找到静态资源的方式如下：" target="_blank" rel="noopener">http://localhost:8088/html，找到静态资源的方式如下：</a></p><p>第1处</p><p>/Users/pengnr/Desktop/ + html  <strong>&gt;&gt;&gt;</strong>  /Users/pengnr/Desktop/html</p><p>第2处</p><p>/html  <strong>&gt;&gt;&gt;</strong>  /Users/pengnr/Desktop/html/</p><p><strong>注意第2处alias结尾有反斜杠，第1处root结尾反斜杠可有可无</strong></p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul><li>极客时间《Nginx核心知识100讲》陶辉</li></ul>]]></content>
     
     <summary type="html">
     
@@ -54,12 +54,11 @@
       
         &lt;p&gt;文/年容&lt;/p&gt;
 &lt;p&gt;踩坑日记，简单记录。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;server {
+&lt;pre&gt;&lt;code class=&quot;line-numbers language-java&quot;&gt;server {
     listen       8088;
     server_name  localhost;
 
-    #第1处
-    location /ht
+   
       
     
     </summary>
@@ -97,7 +96,7 @@
     <published>2020-03-15T16:00:00.000Z</published>
     <updated>2020-03-17T14:47:49.000Z</updated>
     
-    <content type="html"><![CDATA[<p>文/年容</p><p>今天碰到一个题，然后尹小凡、覃小善、彭大年等三人挺感兴趣，遂立了个flag要搞清楚一下，然后也算有了今年的第一篇博文了。</p><p>源码如下，最后i、j、k的值为多少？</p><pre><code class="java">package io.github.ryan.simple;public class Increment {    public void inc() {        int i = 1, j, k;        i = i++;        j = i++;        k = i + ++i * i++;    }}</code></pre><p>通过IntelliJ的ASM Bytecode Outline插件获取到inc()方法字节码操作顺序如下：</p><pre><code class="java">MAXSTACK  = 3    // 最大栈深为3MAXLOCALS = 4    // 最大局部变量表长度为4public inc()V   L0    LINENUMBER 5 // 执行后栈深为0，1#屉i为1    ICONST_1     // 常量1入栈       ISTORE 1     // 常量1出栈并装入1#屉    L1    LINENUMBER 6 // 执行后栈深为0，1#屉i为1    ILOAD 1      // 1#屉的值1入栈          IINC 1 1     // 1#屉的值1自增为2        ISTORE 1     // 栈顶值1出栈并装入1#屉   L2    LINENUMBER 7 // 执行后栈深为0，1#屉i为1，2#屉j为1    ILOAD 1      // 1#屉的值1入栈    IINC 1 1     // 1#屉的值1自增为2    ISTORE 2     // 栈顶值1出栈装入2#屉   L3    LINENUMBER 8 // 执行后栈深为0，局部变量表长为4    ILOAD 1      // 1#屉值2入栈，栈深为1    IINC 1 1     // 1#屉的值2自增为3    ILOAD 1      // 1#屉值3入栈，栈深为2    ILOAD 1      // 1#屉值3入栈，栈深为3    IINC 1 1     // 1#屉值3自增为4    IMUL         // 栈顶两个值相乘 3 * 3，并将结果入栈，栈深为2    IADD         // 栈顶两个值相加 9 + 2，并将结果入栈，栈深为1    ISTORE 3     // 栈顶值11出栈装入3#屉，栈深为0   L4    LINENUMBER 9     RETURN</code></pre><p>几点说明：</p><ul><li>局部变量表可以看成是一排有编号的抽屉（从0开始编号），用于存放方法参数和局部变量。奇怪的是，看起来它的最大长度应该为3才对，因为inc()方法没有参数，并且只有i、j、k三个局部变量，可为什么最大长度会是4呢？因为对于非静态方法，0#屉存放的是方法所属对象的引用</li><li>L0、L1、L2等表示标签，L代表label</li><li>多数指令是对操作栈的数进行操作的，IINC指令则比较特别，它直接对局部变量表上的数进行操作</li><li>本想用Sketch画下图的，但是天色太晚了，有问题请无情指出</li><li>i = 4，j = 1，k = 11</li></ul><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul><li><a href="https://dzone.com/articles/introduction-to-java-bytecode" target="_blank" rel="noopener">https://dzone.com/articles/introduction-to-java-bytecode</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>文/年容</p><p>今天碰到一个题，然后尹小凡、覃小善、彭大年等三人挺感兴趣，遂立了个flag要搞清楚一下，然后也算有了今年的第一篇博文了。</p><p>源码如下，最后i、j、k的值为多少？</p><pre><code class="line-numbers language-java">package io.github.ryan.simple;public class Increment {    public void inc() {        int i = 1, j, k;        i = i++;        j = i++;        k = i + ++i * i++;    }}</code></pre><p>通过IntelliJ的ASM Bytecode Outline插件获取到inc()方法字节码操作顺序如下：</p><pre><code class="line-numbers language-java">MAXSTACK  = 3    // 最大栈深为3MAXLOCALS = 4    // 最大局部变量表长度为4public inc()V   L0    LINENUMBER 5 // 执行后栈深为0，1#屉i为1    ICONST_1     // 常量1入栈       ISTORE 1     // 常量1出栈并装入1#屉    L1    LINENUMBER 6 // 执行后栈深为0，1#屉i为1    ILOAD 1      // 1#屉的值1入栈          IINC 1 1     // 1#屉的值1自增为2        ISTORE 1     // 栈顶值1出栈并装入1#屉   L2    LINENUMBER 7 // 执行后栈深为0，1#屉i为1，2#屉j为1    ILOAD 1      // 1#屉的值1入栈    IINC 1 1     // 1#屉的值1自增为2    ISTORE 2     // 栈顶值1出栈装入2#屉   L3    LINENUMBER 8 // 执行后栈深为0，局部变量表长为4    ILOAD 1      // 1#屉值2入栈，栈深为1    IINC 1 1     // 1#屉的值2自增为3    ILOAD 1      // 1#屉值3入栈，栈深为2    ILOAD 1      // 1#屉值3入栈，栈深为3    IINC 1 1     // 1#屉值3自增为4    IMUL         // 栈顶两个值相乘 3 * 3，并将结果入栈，栈深为2    IADD         // 栈顶两个值相加 9 + 2，并将结果入栈，栈深为1    ISTORE 3     // 栈顶值11出栈装入3#屉，栈深为0   L4    LINENUMBER 9     RETURN</code></pre><p>几点说明：</p><ul><li>局部变量表可以看成是一排有编号的抽屉（从0开始编号），用于存放方法参数和局部变量。奇怪的是，看起来它的最大长度应该为3才对，因为inc()方法没有参数，并且只有i、j、k三个局部变量，可为什么最大长度会是4呢？因为对于非静态方法，0#屉存放的是方法所属对象的引用</li><li>L0、L1、L2等表示标签，L代表label</li><li>多数指令是对操作栈的数进行操作的，IINC指令则比较特别，它直接对局部变量表上的数进行操作</li><li>本想用Sketch画下图的，但是天色太晚了，有问题请无情指出</li><li>i = 4，j = 1，k = 11</li></ul><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul><li><a href="https://dzone.com/articles/introduction-to-java-bytecode" target="_blank" rel="noopener">https://dzone.com/articles/introduction-to-java-bytecode</a></li></ul>]]></content>
     
     <summary type="html">
     
@@ -106,7 +105,7 @@
         &lt;p&gt;文/年容&lt;/p&gt;
 &lt;p&gt;今天碰到一个题，然后尹小凡、覃小善、彭大年等三人挺感兴趣，遂立了个flag要搞清楚一下，然后也算有了今年的第一篇博文了。&lt;/p&gt;
 &lt;p&gt;源码如下，最后i、j、k的值为多少？&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;package io
+&lt;pre&gt;&lt;code class=&quot;line-numbers lan
       
     
     </summary>
@@ -262,7 +261,7 @@
     <published>2019-04-04T16:00:00.000Z</published>
     <updated>2019-12-17T01:57:30.000Z</updated>
     
-    <content type="html"><![CDATA[<p>文/年容</p><p>先扯淡。</p><p>最近在果壳网看到<a href="https://www.guokr.com/article/445991/" target="_blank" rel="noopener"><span>一篇文章</span></a>解释了一个问题：为什么不管是坐在写字楼的办公位敲打键盘还是行走于施工一线挥汗如雨都会让人觉得劳累。我总结了一下原因：从被动的努力中获取不到满足感使人疲惫。解释一下就是内心是想刷微博刷朋友圈追剧搓麻打牌的，但是又因为生活所迫不得不”努力”地搬砖维持生计从而导致疲劳。换句话说那些发自内心喜欢自己工作的人从来不会感到疲倦。能从工作中真正获得满足感和自由的人100个里头也许只有一个吧。</p><p>闲扯结束，来聊点伪技术。</p><p>不知道你们觉得Vue里头最简洁的一个函数是什么？先来看几行代码。</p><pre><code class="javascript">import Vue from &#39;vue&#39;import App from &#39;./App.vue&#39;new Vue({  render: h =&gt; h(App),}).$mount(&#39;#app&#39;)</code></pre><p>应该不陌生，通过使用Vue CLI构建出一个最简单的项目，在项目的src目录下的main.js文件里能找到这几行代码。以上几行代码的作用是渲染传递给h函数的根组件即App后挂载到DOM节点树上。为了方便，我做了一个简单的目录树（去除了一些与本主题无关的目录或文件）。</p><pre><code class="scss">vue-demo├── public│   └── index.html└── src    ├── App.vue    ├── components    │   └── HelloWorld.vue    └── main.js</code></pre><p>作为一个新手，以我狭隘的视野去看，render函数的简洁着实让我感到惊讶。render是一个函数，给render传进去的参数h也是一个函数,h函数接收的参数是App。这行代码很简短却做了好多事情。所以我之前提到的最简洁的函数指的也就是它了。有个一开始让我很摸不着头脑的问题是为啥取了个h这么无厘头名称做参数名。google一番后在<a href="https://css-tricks.com/what-does-the-h-stand-for-in-vues-render-method/" target="_blank" rel="noopener"><span>这篇文章<span></span></span></a>里找到了答案。大致意思是h是hyperscritpt的缩写，把h(App)理解为一个动词就是使得App成为DOM, 准确的说h(App)返回的应该是一个虚拟DOM。至于虚拟DOM这种东西是什么就不讲了，因为我也不知道。来看我从VueMastery官网课程中截取的一张图。</p><p><img src="https://raw.githubusercontent.com/pengnianrong/bed/master/img/Vue%E5%8E%9F%E7%90%86-1.png" alt="Vue原理-1"></p><p>main.js右边的类似于盒子的东西就是就是render函数了，暂时取个比较俗的名字管它叫渲染器吧。所有子组件，比如HelloWorld等组件的归属最终都是App，所以只要把App传递进渲染器中就能渲染整个Vue应用了。大致的流程就是先将App这个根组件放到渲染器中进行渲染，渲染完成后会把渲染结果通过$mount()函数挂载到index.html文件中id为app的div下，这样整个应用就形成了。</p><p>这就是一个励志于成为一个偏后端的临栈Java工程师的第一篇伪技术博文了。如有错误，请无情的批评指正。下一篇准备写下Docker。基本月更，别太惦记。</p>]]></content>
+    <content type="html"><![CDATA[<p>文/年容</p><p>先扯淡。</p><p>最近在果壳网看到<a href="https://www.guokr.com/article/445991/" target="_blank" rel="noopener"><span>一篇文章</span></a>解释了一个问题：为什么不管是坐在写字楼的办公位敲打键盘还是行走于施工一线挥汗如雨都会让人觉得劳累。我总结了一下原因：从被动的努力中获取不到满足感使人疲惫。解释一下就是内心是想刷微博刷朋友圈追剧搓麻打牌的，但是又因为生活所迫不得不”努力”地搬砖维持生计从而导致疲劳。换句话说那些发自内心喜欢自己工作的人从来不会感到疲倦。能从工作中真正获得满足感和自由的人100个里头也许只有一个吧。</p><p>闲扯结束，来聊点伪技术。</p><p>不知道你们觉得Vue里头最简洁的一个函数是什么？先来看几行代码。</p><pre><code class="line-numbers language-javascript">import Vue from &#39;vue&#39;import App from &#39;./App.vue&#39;new Vue({  render: h =&gt; h(App),}).$mount(&#39;#app&#39;)</code></pre><p>应该不陌生，通过使用Vue CLI构建出一个最简单的项目，在项目的src目录下的main.js文件里能找到这几行代码。以上几行代码的作用是渲染传递给h函数的根组件即App后挂载到DOM节点树上。为了方便，我做了一个简单的目录树（去除了一些与本主题无关的目录或文件）。</p><pre><code class="line-numbers language-scss">vue-demo├── public│   └── index.html└── src    ├── App.vue    ├── components    │   └── HelloWorld.vue    └── main.js</code></pre><p>作为一个新手，以我狭隘的视野去看，render函数的简洁着实让我感到惊讶。render是一个函数，给render传进去的参数h也是一个函数,h函数接收的参数是App。这行代码很简短却做了好多事情。所以我之前提到的最简洁的函数指的也就是它了。有个一开始让我很摸不着头脑的问题是为啥取了个h这么无厘头名称做参数名。google一番后在<a href="https://css-tricks.com/what-does-the-h-stand-for-in-vues-render-method/" target="_blank" rel="noopener"><span>这篇文章<span></span></span></a>里找到了答案。大致意思是h是hyperscritpt的缩写，把h(App)理解为一个动词就是使得App成为DOM, 准确的说h(App)返回的应该是一个虚拟DOM。至于虚拟DOM这种东西是什么就不讲了，因为我也不知道。来看我从VueMastery官网课程中截取的一张图。</p><p><img src="https://raw.githubusercontent.com/pengnianrong/bed/master/img/Vue%E5%8E%9F%E7%90%86-1.png" alt="Vue原理-1"></p><p>main.js右边的类似于盒子的东西就是就是render函数了，暂时取个比较俗的名字管它叫渲染器吧。所有子组件，比如HelloWorld等组件的归属最终都是App，所以只要把App传递进渲染器中就能渲染整个Vue应用了。大致的流程就是先将App这个根组件放到渲染器中进行渲染，渲染完成后会把渲染结果通过$mount()函数挂载到index.html文件中id为app的div下，这样整个应用就形成了。</p><p>这就是一个励志于成为一个偏后端的临栈Java工程师的第一篇伪技术博文了。如有错误，请无情的批评指正。下一篇准备写下Docker。基本月更，别太惦记。</p>]]></content>
     
     <summary type="html">
     

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
-    <link rel="stylesheet" href="/prism/prism.css">
     <script src="/prism/prism.js" async></script>
+    <link rel="stylesheet" href="/prism/prism.css">
     <!-- so meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -122,7 +122,7 @@
 <p>最近在果壳网看到<a href="https://www.guokr.com/article/445991/" target="_blank" rel="noopener"><span>一篇文章</span></a>解释了一个问题：为什么不管是坐在写字楼的办公位敲打键盘还是行走于施工一线挥汗如雨都会让人觉得劳累。我总结了一下原因：从被动的努力中获取不到满足感使人疲惫。解释一下就是内心是想刷微博刷朋友圈追剧搓麻打牌的，但是又因为生活所迫不得不”努力”地搬砖维持生计从而导致疲劳。换句话说那些发自内心喜欢自己工作的人从来不会感到疲倦。能从工作中真正获得满足感和自由的人100个里头也许只有一个吧。</p>
 <p>闲扯结束，来聊点伪技术。</p>
 <p>不知道你们觉得Vue里头最简洁的一个函数是什么？先来看几行代码。</p>
-<pre><code class="javascript">import Vue from &#39;vue&#39;
+<pre><code class="line-numbers language-javascript">import Vue from &#39;vue&#39;
 import App from &#39;./App.vue&#39;
 
 new Vue({
@@ -130,7 +130,7 @@ new Vue({
 }).$mount(&#39;#app&#39;)
 </code></pre>
 <p>应该不陌生，通过使用Vue CLI构建出一个最简单的项目，在项目的src目录下的main.js文件里能找到这几行代码。以上几行代码的作用是渲染传递给h函数的根组件即App后挂载到DOM节点树上。为了方便，我做了一个简单的目录树（去除了一些与本主题无关的目录或文件）。</p>
-<pre><code class="scss">vue-demo
+<pre><code class="line-numbers language-scss">vue-demo
 ├── public
 │   └── index.html
 └── src
