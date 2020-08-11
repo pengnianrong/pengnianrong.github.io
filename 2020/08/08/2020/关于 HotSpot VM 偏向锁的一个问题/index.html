@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="搬主任">
 <meta property="og:description" content="文&#x2F;年容 这几天对 HotSpot VM 内置锁升、降级挺感兴趣便研究了一番，中间一个细节问题卡了我两天，甚至还请教了一位博客好友，好在现在弄清楚了一下，简单记录，顺便感谢。 问题：为什么一致性哈希码（Identity Hash Code）会对偏向锁产生影响？ 64位 HotSpot VM 四种锁状态下对象头的 Mark Word 布局如下： |--------------------------">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-08-09T00:43:09.184Z">
+<meta property="og:updated_time" content="2020-08-11T01:12:19.429Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于 HotSpot VM 偏向锁的一个问题">
 <meta name="twitter:description" content="文&#x2F;年容 这几天对 HotSpot VM 内置锁升、降级挺感兴趣便研究了一番，中间一个细节问题卡了我两天，甚至还请教了一位博客好友，好在现在弄清楚了一下，简单记录，顺便感谢。 问题：为什么一致性哈希码（Identity Hash Code）会对偏向锁产生影响？ 64位 HotSpot VM 四种锁状态下对象头的 Mark Word 布局如下： |--------------------------">
@@ -130,11 +130,11 @@
 |--------------------------------------------------------|
 </code></pre><p>为使得对象通过 Object::hashCode() 或者 System::identityHashCode(Object) 计算出的一致性哈希码保持不变， 计算结果会被存储在对象头的 Mark Word 中，再次调用就可以直接获取以此保证不变。但对象处于锁定状态下，Mark Word 中大部分空间都被一个指针覆盖了，那原来的 Mark Word 怎么办呢？稍作解释如下：</p>
 <ul>
-<li><p>重量级锁状态下，JVM源码 src/share/vm/runtime/objectMonitor.hpp 中有如下变量用于备份 Mark Word。</p>
+<li><p>重量级锁状态下，JVM 源码 src/share/vm/runtime/objectMonitor.hpp 中有如下变量用于备份 Mark Word。</p>
 <pre><code class="line-numbers language-java">volatile markOop _header;       
 </code></pre>
 </li>
-<li><p>轻量级锁状态下，JVM源码 src/share/vm/runtime/basicLock.hpp 中有如下变量用于备份 Mark Word。</p>
+<li><p>轻量级锁状态下，JVM 源码 src/share/vm/runtime/basicLock.hpp 中有如下变量用于备份 Mark Word。</p>
 <pre><code class="line-numbers language-java">volatile markOop _displaced_header;
 </code></pre>
 </li>
@@ -145,7 +145,7 @@
 </ul>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
 <li><a href="https://pdfs.semanticscholar.org/b8e4/cb0c212fd799522817b914ffcd24470f707e.pdf" target="_blank" rel="noopener"><span>Evaluating and improving biased locking in the HotSpot virtual machine<span></span></span></a></li>
-<li>《深入理解 JVM 虚拟机》第3版</li>
+<li>《深入理解 Java 虚拟机》第3版 周志明 著</li>
 </ul>
 
   </div>
